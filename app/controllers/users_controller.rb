@@ -42,9 +42,7 @@ class UsersController < ApplicationController
   end
   
   def correct_user
-    if @user != current_user
-      redirect_to @user
-    end
+    redirect_to @user if @user != current_user
   end
   
   def user_params

@@ -3,7 +3,9 @@
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %>
+        <p><%= @user.name %></p>
+        <p><%= @user.area %></p>
+        <p><%= @user.email %></p>
       </h1>
     </section>
   </aside>
@@ -15,5 +17,18 @@
         <%= render @microposts %>
       </ol>
     <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-2">
+    <div>
+      <button class="btn btn-default"><%= link_to 'Followings', followings_user_path(@user) %></button>
+    </div>
+  </div>
+    <div class="col-md-2">
+      <div> 
+      <button class="btn btn-default"><%= link_to 'Followers', followers_user_path(@user) %></button>
+    </div>
   </div>
 </div>

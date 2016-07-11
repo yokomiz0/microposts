@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <h1>Followers</h1>
+    <%  @followers.each do |user| %>
+        <div class="row">
+            <h1>
+                <%= gravatar_for user %>
+                <%= user.name %>
+            </h1>
+        </div>
+    <% end %>
+</div>
